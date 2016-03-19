@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package indexer;
 
 import com.cybozu.labs.langdetect.LangDetectException;
@@ -14,17 +10,10 @@ import org.xml.sax.SAXException;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-/**
- *
- * @author Teo
- */
 public class Indexer {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) throws SAXException, TikaException, LangDetectException {
-        // TODO code application logic here
+ 
          try{
             if(args.length!=2){
                 throw new InvalidArgumentException();
