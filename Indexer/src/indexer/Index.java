@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package indexer;
 
 import com.cybozu.labs.langdetect.LangDetectException;
@@ -40,10 +36,6 @@ import org.apache.lucene.util.BytesRef;
 import org.apache.tika.exception.TikaException;
 import org.xml.sax.SAXException;
 
-/**
- *
- * @author Teo
- */
 public class Index {
     
     private final Directory directory;
