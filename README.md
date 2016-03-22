@@ -11,31 +11,39 @@ high tf*idf value, that have been indexed by project Indexer. You could schedule
 
 to run automatically and integrate project Searcher in your application to search the index.
 ## Usage
-Indexer:
+####Indexer:
+
+in windows cmd:
+
+cd in project indexer.
+#### compile
+
+path\to\Indexer>javac -d bin -sourcepath src -cp lib\jsonic-1.2.0.jar;lib\langdetect.jar;lib\lucene-analyzers-common-5.0.0.jar;lib\lucene-core-5.0.0.jar;lib\tika-app-1.7.jar src/indexer/Indexer.java
+#### run 
 
 args[0]: directory to be indexed
 
 args[1]: directory of index to be stored
 
+path\to\Indexer>java -cp bin;lib\jsonic-1.2.0.jar;lib\langdetect.jar;lib\lucene-analyzers-common-5.0.0.jar;lib\lucene-core-5.0.0.jar;lib\tika-app-1.7.jar indexer.Ind exer directory index_directory
+
+#### Searcher:
+
 in windows cmd:
 
-1. cd in project indexer.
+cd in project Searcher.
+#### compile 
 
-2. path\to\Indexer>java -cp bin;lib\jsonic-1.2.0.jar;lib\langdetect.jar;lib\lucene-analyzers-common-5.0.0.jar;lib\lucene-core-5.0.0.jar;lib\tika-app-1.7.jar indexer.Ind exer directory index_directory
+path\to\Searcher>javac -d bin -sourcepath src -cp lib\lucene-analy zers-common-5.0.0.jar;lib\lucene-core-5.0.0.jar;lib\lucene-queryparser-5.0.0.jar src/searcher/Searcher.java
+#### run 
 
-Searcher:
-
-args[0]: query
+args[0]: query  
 
 args[1]: query's language
 
 args[2]: directory of stored index
 
-in windows cmd:
-
-1. cd in project Searcher.
-
-2. path\to\Searcher>java -cp bin;lib\lucene-analy zers-common-5.0.0.jar;lib\lucene-core-5.0.0.jar;lib\lucene-queryparser-5.0.0.jar searcher.Searcher query en index_directory
+path\to\Searcher>java -cp bin;lib\lucene-analy zers-common-5.0.0.jar;lib\lucene-core-5.0.0.jar;lib\lucene-queryparser-5.0.0.jar searcher.Searcher query en index_directory
 
 In args[1] type:
 
