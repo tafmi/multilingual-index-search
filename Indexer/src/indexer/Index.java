@@ -85,14 +85,19 @@ public class Index {
 
     private void indexDirectory(File file) throws IOException, FileNotFoundException, SAXException, TikaException, LangDetectException{
 
-        File[] files=file.listFiles();
-        for(File f:files){
-            if(f.isDirectory()){
-               indexDirectory(f);
-            }
-            else{
-                indexFile(f);
-            }
+        if(file.list()!=null){
+           File[] files=file.listFiles();
+           for(File f:files){
+               if(f.isDirectory()){
+                  indexDirectory(f);
+               }
+               else{
+                   indexFile(f);//process the file
+               }
+           }   
+        }
+        else{
+            return;
         }       
     }
 
